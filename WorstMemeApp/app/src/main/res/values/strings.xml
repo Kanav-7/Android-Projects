@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Worst Meme App</string>
+    <string name="enter_top">Enter Top Text</string>
+    <string name="enter_bottom">Enter Bottom Text</string>
+    <string name="make_meme">Make Meme</string>
+    <string name="top">Top Text</string>
+    <string name="Bottom">Bottom Text</string>
+</resources>
