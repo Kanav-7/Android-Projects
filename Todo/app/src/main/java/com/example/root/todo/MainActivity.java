@@ -23,27 +23,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dbHandler = new DBHandler(this,null,null,1);
+        dbHandler = new DBHandler(this,null,null,2);
 
-        final ArrayList<String> a = dbHandler.dbToarr();
-        final ArrayList<String> b = dbHandler.dbToddesc();
-        final ArrayList<Integer> c = dbHandler.dbToid();
-        ListAdapter myadaptor = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,a);
+        final ArrayList<Todo> a = dbHandler.dbToarr();
+       // ListAdapter myadaptor = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,a.);
+        ListAdapter myadaptor = new custom_list(this,a);
         ListView mylist = (ListView) findViewById(R.id.mylist);
         mylist.setAdapter(myadaptor);
-
+        mylist.setFocusable(false);
         mylist.setOnItemClickListener(
                 new AdapterView.OnItemClickListener(){
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                             //int pos = parent.getPositionForView(view);
-                            String title = String.valueOf(parent.getItemAtPosition(position));
-                            String desc = b.get(position);
-                            Integer idi = c.get(position);
+                            String title = a.get(position).get_title();
+                            String desc = a.get(position).get_description();
+                            Integer idi = a.get(position).get_id();
+                            Integer md = a.get(position).get_done();
                             Intent I = new Intent(MainActivity.this,DisplayTodo.class);
                             I.putExtra("prtitle",title);
                             I.putExtra("prdesc",desc);
                             I.putExtra("prid",idi);
+                            I.putExtra("prdone",md);
                             startActivity(I);
                     }
                 }

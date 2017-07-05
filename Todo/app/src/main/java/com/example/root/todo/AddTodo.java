@@ -20,11 +20,11 @@ public class AddTodo extends AppCompatActivity {
 
         mytitle = (EditText) findViewById(R.id.editText);
         mydesc = (EditText) findViewById(R.id.editText2);
-        dbHandler = new DBHandler(this,null,null,1);
+        dbHandler = new DBHandler(this,null,null,2);
     }
 
     public void addtodo(View view){
-        Todo newtodo = new Todo(mytitle.getText().toString(),mydesc.getText().toString());
+        Todo newtodo = new Todo(mytitle.getText().toString(),mydesc.getText().toString(),0);
         dbHandler.addtodo(newtodo);
         Toast.makeText(AddTodo.this,"To-Do Added Successfully",Toast.LENGTH_LONG).show();
         backhome(view);

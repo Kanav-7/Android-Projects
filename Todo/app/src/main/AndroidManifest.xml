@@ -18,13 +18,16 @@
         </activity>
         <activity
             android:name=".AddTodo"
-            android:windowSoftInputMode="adjustNothing"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
 
-        <activity android:name=".DisplayTodo"
-            android:parentActivityName=".MainActivity">
-        </activity>
+        <activity
+            android:name=".DisplayTodo"
+            android:parentActivityName=".MainActivity"></activity>
+
+        <activity android:name=".EditTodo"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
     </application>
 
 </manifest>

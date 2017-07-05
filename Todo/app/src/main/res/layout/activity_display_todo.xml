@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ADD8E6"
     tools:context="com.example.root.todo.DisplayTodo">
 
     <TextView
@@ -31,10 +32,43 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="106dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="72dp"
         android:onClick="deletetodo"
-        android:text="Delete this" />
+        android:text="Delete" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="49dp"
+        android:onClick="edittodo"
+        android:text="EDIT" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="29dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button4"
+        android:layout_alignTop="@+id/textView5"
+        android:onClick="doneclicked"
+        android:text="CheckBox" />
 
 </android.widget.RelativeLayout>
