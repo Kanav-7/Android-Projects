@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ADD8E6"
+    android:background="@color/bgcol"
     tools:context="com.example.root.todo.MainActivity">
 
     <ListView
@@ -25,15 +25,21 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:text="To-do List"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/coltext" />
 
     <Button
         android:id="@+id/button"
+        style="@android:style/Widget.Material.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
+        android:background="@color/colorPrimary"
         android:onClick="Onchange"
-        android:text="Add New Task" />
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Add New Task"
+        android:textColor="@color/colorAccent" />
 </android.widget.RelativeLayout>

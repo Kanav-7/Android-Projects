@@ -79,14 +79,18 @@ public class DisplayTodo extends AppCompatActivity {
     }
 
     public void doneclicked(View view){
-        if(prdone == 0){
+        if(prdone == 0)
+        {
             Todo mytodo = new Todo(prtitle,prdesc,1);
             mytodo.set_id(prid);
+            prdone = 1;
             dbHandler.updatetodo(mytodo);
             mydone.setText("Task is done");
             check.setText("Mark not done");
         }
-        else {
+        else
+        {
+            prdone = 0;
             Todo mytodo = new Todo(prtitle,prdesc,0);
             mytodo.set_id(prid);
             dbHandler.updatetodo(mytodo);

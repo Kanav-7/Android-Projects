@@ -1,74 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ADD8E6"
-    tools:context="com.example.root.todo.DisplayTodo">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp"
-        android:text="Title Here"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:text="Description here"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="30sp" />
+    <android.widget.RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgcol"
+        tools:context="com.example.root.todo.DisplayTodo">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="72dp"
-        android:onClick="deletetodo"
-        android:text="Delete" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="94dp"
+            android:text="Title Here"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/coltext" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="49dp"
-        android:onClick="edittodo"
-        android:text="EDIT" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:text="Description here"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/coltext"
+            android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="29dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        android:textSize="18sp" />
+        <Button
+            android:id="@+id/button2"
+            style="@android:style/Widget.Material.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="72dp"
+            android:background="@color/colorPrimary"
+            android:onClick="deletetodo"
+            android:text="Delete"
+            android:textColor="@color/colorAccent" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button4"
-        android:layout_alignTop="@+id/textView5"
-        android:onClick="doneclicked"
-        android:text="CheckBox" />
+        <Button
+            android:id="@+id/button4"
+            style="@android:style/Widget.Material.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button2"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="49dp"
+            android:background="@color/colorPrimary"
+            android:onClick="edittodo"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="EDIT"
+            android:textColor="@color/colorAccent" />
 
-</android.widget.RelativeLayout>
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button2"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="29dp"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/button4"
+            android:layout_alignTop="@+id/textView5"
+            android:onClick="doneclicked"
+            android:text="CheckBox"
+            android:textColor="@color/colorAccent" />
+
+    </android.widget.RelativeLayout>
+</ScrollView>

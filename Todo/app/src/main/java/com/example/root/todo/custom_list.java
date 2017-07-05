@@ -35,13 +35,13 @@ public class custom_list extends ArrayAdapter<Todo> {
         if(mydata.get_done() == 0)
         {
             check.setText("Mark done");
-            customView.setBackgroundColor(0xADD8E6);
+            customView.setBackgroundColor(Color.rgb(62,65,79));
         }
         else
         {
             check.setChecked(true);
             check.setText("Mark not done");
-            customView.setBackgroundColor(Color.CYAN);
+            customView.setBackgroundColor(Color.rgb(73,188,174));
         }
 
         check.setOnClickListener(
@@ -52,7 +52,7 @@ public class custom_list extends ArrayAdapter<Todo> {
                             mydata.set_done(0);
                             dbHandler.updatetodo(mydata);
                             check.setText("Mark done");
-                            customView.setBackgroundColor(0xADD8E6);
+                            customView.setBackgroundColor(Color.rgb(62,65,79));
 
                         }
                         else
@@ -60,7 +60,7 @@ public class custom_list extends ArrayAdapter<Todo> {
                             mydata.set_done(1);
                             dbHandler.updatetodo(mydata);
                             check.setText("Mark not done");
-                            customView.setBackgroundColor(Color.CYAN);
+                            customView.setBackgroundColor(Color.rgb(73,188,174));
                         }
                     }
                 }

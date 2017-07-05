@@ -16,7 +16,8 @@
         android:layout_weight="0.46"
         android:paddingLeft="10dp"
         android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/coltext" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -24,6 +25,7 @@
         android:layout_height="105dp"
         android:layout_marginLeft="60dp"
         android:layout_weight="0.59"
-        android:text="Mark Done" />
+        android:text="Mark Done"
+        android:textColor="@color/colorAccent" />
 
 </LinearLayout>

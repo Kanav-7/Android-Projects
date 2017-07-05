@@ -10,7 +10,7 @@
                 android:bottomRightRadius="5dip"
 
                 />
-            <stroke android:width="1dip" android:color="#1caadf" />
+            <stroke android:width="1dip" android:color="@color/colorPrimaryDark" />
             <gradient android:angle="-90" android:startColor="#ffffff" android:endColor="#ffffff" />
         </shape>
     </item>
